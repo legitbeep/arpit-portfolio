@@ -6,22 +6,51 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --primary-blue: #2a27ff;
+  --primary-bg: #0a0a09;
+  --primary-text: #f0f0f0;
+
+  --secondary-text: #a7a7a7;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.dark-bg {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.heading-text {
+  font-size: 50px;
+}
+
+span {
+  font-size: 16px;
+  color: var(--secondary-text);
+}
+
+.project-details span {
+  font-size: 18px;
+  color: var(--primary-text);
+}
+
+.project-details h2 {
+  font-size: 24px;
+  color: var(--primary-text);
+}
+
+.project-details .secondary-text {
+  font-size: 12px;
+  color: var(--secondary-text);
+}
+
+.project-details .tags {
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 16px;
+  color: var(--secondary-text);
 }

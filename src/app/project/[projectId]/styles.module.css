@@ -1,0 +1,43 @@
+.reactMarkdown h1,
+.reactMarkdown h2,
+.reactMarkdown h3,
+.reactMarkdown h4,
+.reactMarkdown h5,
+.reactMarkdown h6 {
+  font-weight: bold;
+  color: var(--primary-text);
+  margin: 0;
+  padding: 0;
+  margin: 32px 0;
+}
+
+.reactMarkdown li {
+  list-style-type: disc;
+}
+
+.reactMarkdown p {
+  margin: 10px 0;
+}
+.reactMarkdown img {
+  margin: 100px 0;
+}
+
+/* add font size for each h tag respectively  */
+.reactMarkdown h1 {
+  font-size: 2.5rem;
+}
+.reactMarkdown h2 {
+  font-size: 2rem;
+}
+.reactMarkdown h3 {
+  font-size: 1.75rem;
+}
+.reactMarkdown h4 {
+  font-size: 1.5rem;
+}
+.reactMarkdown h5 {
+  font-size: 1.25rem;
+}
+.reactMarkdown h6 {
+  font-size: 1rem;
+}
