@@ -37,12 +37,12 @@ const Projects = ({ posts, loading }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {loading
           ? [1, 2, 3].map((_, i) => (
-              <div className="w-full">
+              <div key={i} className="w-full">
                 <Skeleton key={i} height="150px" width="100%" />
               </div>
             ))
-          : posts?.map((post) => (
-              <AnimatedDiv>
+          : posts?.map((post, idx) => (
+              <AnimatedDiv key={idx}>
                 <div
                   className="project-details w-full opacity-70 hover:opacity-100 cursor-pointer flex flex-col"
                   role="button"
@@ -73,8 +73,10 @@ const Projects = ({ posts, loading }) => {
                   <h2>{post.title}</h2>
                   {post.tags?.length && (
                     <div className="flex gap-4 flex-wrap">
-                      {post.tags.map((tag) => (
-                        <span className="tags">{tag?.name}</span>
+                      {post.tags.map((tag, idx) => (
+                        <span key={idx} className="tags">
+                          {tag?.name}
+                        </span>
                       ))}
                     </div>
                   )}

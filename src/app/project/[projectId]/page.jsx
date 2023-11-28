@@ -1,7 +1,6 @@
 "use client";
 import { fetchPostData } from "@/api/server";
 import { Skeleton } from "@chakra-ui/react";
-import { Head } from "next/document";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
