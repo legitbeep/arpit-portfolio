@@ -2,22 +2,18 @@ import React from "react";
 
 const SOCIAL_LINKS = [
   {
-    label: "Instagram",
-    link: "",
-  },
-  {
-    label: "Twitter",
-    link: "",
+    label: "Behance",
+    link: "https://www.behance.net/arpitkumaryadav",
   },
   {
     label: "LinkedIn",
-    link: "",
+    link: "https://www.linkedin.com/in/arpit-yadav-a6a8b8171/",
   },
 ];
 
 const Footer = () => {
   return (
-    <div className="border-t-2 border-white mt-12 pt-20 pb-12 mx-12 flex justify-between flex-col md:flex-row">
+    <div className=" mt-12 pt-20 pb-12 mx-12 flex justify-between flex-col gap-10 md:flex-row">
       <h4>Copyright © {new Date().getFullYear()} Arpit Yadav</h4>
       <div className="flex gap-10 flex-col md:flex-row">
         {SOCIAL_LINKS.map((link) => (

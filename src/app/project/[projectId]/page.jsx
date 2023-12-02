@@ -6,20 +6,6 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import styles from "./styles.module.css";
 
-const renderers = {
-  heading: ({ level, children }) => {
-    const HeadingTag = `h${level}`;
-    return (
-      <HeadingTag style={{ fontWeight: "bold", marginBottom: "1rem" }}>
-        {children}
-      </HeadingTag>
-    );
-  },
-  paragraph: ({ children }) => (
-    <p style={{ marginBottom: "0.5rem" }}>{children}</p>
-  ),
-};
-
 const Page = () => {
   // extract projectId from params
   const { projectId } = useParams();
@@ -34,13 +20,18 @@ const Page = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     initFetch();
   }, []);
 
   return (
     <>
       {loading ? (
-        <Skeleton height="150px" width="100%" />
+        <main className="p-12 flex flex-col gap-10">
+          <Skeleton height="100px" width="100%" />
+          <Skeleton height="100px" width="100%" />
+          <Skeleton height="100px" width="100%" />
+        </main>
       ) : (
         <>
           <main className="p-12">
