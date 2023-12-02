@@ -12,7 +12,7 @@ const Hero = () => {
     <div className="min-h-[90vh] grid grid-cols-1 md:grid-cols-10 md:gap-32 gap-12 justify-between items-center  mb-20">
       <div className="md:col-span-7">
         <h1 className="heading-text">
-          Hi !👋 I'm passionate about making user-friendly, interactive and
+          Hi !👋 I&apos;m passionate about making user-friendly, interactive and
           delightful user experience.
         </h1>
         <h2 className="sub-heading-text mt-10">
@@ -31,12 +31,12 @@ const Hero = () => {
           </CustomButton>
         </div>
       </div>
-      <div className=" md:col-span-3">
-        <img
+      <div className="flex justify-center md:col-span-3">
+        <Image
           height={400}
           width={400}
           alt="avatar"
-          className="h-[250px] w-[250px] rounded object-contain"
+          className="h-[250px] w-[250px] rounded object-contain grayscale"
           src="/arpit.png"
         />
       </div>

@@ -50,7 +50,7 @@ const Projects = ({ posts, loading }) => {
                 onClick={() => onViewProject(post.id)}
               >
                 {post.cover && (
-                  <img
+                  <Image
                     src={post.cover}
                     alt="cover-img"
                     style={{
@@ -60,6 +60,8 @@ const Projects = ({ posts, loading }) => {
                       aspectRatio: "1/1",
                       objectFit: "cover",
                     }}
+                    height={800}
+                    width={1200}
                     className="dark-bg max-h-[300px] "
                   />
                 )}
