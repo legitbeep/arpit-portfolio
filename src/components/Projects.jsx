@@ -45,7 +45,7 @@ const Projects = ({ posts, loading }) => {
           posts?.map((post, idx) => (
             <AnimatedDiv key={idx}>
               <div
-                className="project-details w-full opacity-70 hover:opacity-100 cursor-pointer flex flex-col items-end"
+                className="project-details w-full cursor-pointer flex flex-col items-end"
                 role="button"
                 onClick={() => onViewProject(post.id)}
               >
@@ -62,7 +62,7 @@ const Projects = ({ posts, loading }) => {
                     }}
                     height={800}
                     width={1200}
-                    className="dark-bg max-h-[300px] "
+                    className="dark-bg max-h-[300px] opacity-70 hover:opacity-100"
                   />
                 )}
                 <span className="secondary-text">
@@ -79,7 +79,7 @@ const Projects = ({ posts, loading }) => {
                 {post.tags?.length && (
                   <div className="flex gap-4 flex-wrap">
                     {post.tags.map((tag, idx) => (
-                      <span key={idx} className="tags">
+                      <span key={idx} className="tags text-white">
                         {tag?.name}
                       </span>
                     ))}

@@ -24,11 +24,24 @@ export default function Home() {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     initFetch();
   }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-12 pt-4">
+      <video
+        class="w-full object-cover fixed -z-10 left-0 top-0"
+        autoPlay
+        muted
+        loop
+        aria-atomic="true"
+        controlsList="nodownload"
+        aria-controls="video-controls"
+      >
+        <source src="/hero-bg.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
       <AnimatedDiv>
         <Hero />
       </AnimatedDiv>

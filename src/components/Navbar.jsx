@@ -21,7 +21,7 @@ const LINKS = [
 const Navbar = () => {
   const [openCollapse, setOpenCollapse] = React.useState(false);
   return (
-    <nav class="dark-bg ">
+    <nav class=" ">
       <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4 px-12">
         <Link href="/#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <AnimatedColors />
