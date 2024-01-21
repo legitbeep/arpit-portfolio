@@ -72,3 +72,10 @@ span {
     background-position: 0% 50%;
   }
 }
+/* phone media query */
+@media (max-width: 768px) {
+  .sm-phone-vid {
+    height: 100svh;
+    width: auto;
+  }
+}
