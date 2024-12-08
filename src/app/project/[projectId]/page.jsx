@@ -28,9 +28,9 @@ const Page = () => {
     <>
       {loading ? (
         <main className="p-12 flex flex-col gap-10">
-          <Skeleton height="100px" width="100%" />
-          <Skeleton height="100px" width="100%" />
-          <Skeleton height="100px" width="100%" />
+          <Skeleton height="250px" width="100%" />
+          <Skeleton height="250px" width="100%" />
+          <Skeleton height="250px" width="100%" />
         </main>
       ) : (
         <>

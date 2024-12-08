@@ -1,0 +1,135 @@
+{
+    "projects": [
+        {
+            "cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/109b72ca-f851-4505-b1c9-c89d9fb02d92/612706b5-fd4d-4bbd-806a-a78d2e678317/Wave_SVG.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241208%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241208T080622Z&X-Amz-Expires=3600&X-Amz-Signature=b064f5d5b7e8afd45742bfd545b3a10541527e4dd89a58d6e49a739244a7157f&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "title": "Mental Health Content Management Dashboard",
+            "tags": [
+                {
+                    "id": "bb9fdf13-d59c-4573-8b48-34ddd2e93379",
+                    "name": "UI Design",
+                    "color": "orange"
+                },
+                {
+                    "id": "d4348321-7c25-4a0f-9ba8-69d2adb5fcf5",
+                    "name": "UX Design",
+                    "color": "green"
+                },
+                {
+                    "id": "95f791e9-c4fe-48a8-bcf0-986413676305",
+                    "name": "Prototyping",
+                    "color": "yellow"
+                }
+            ],
+            "description": "Simplifying the management of mental health content for a platform supporting young people.",
+            "date": "2023-12-01",
+            "id": "145582a90eae8004950ed2000d0ecf0a"
+        },
+        {
+            "cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/109b72ca-f851-4505-b1c9-c89d9fb02d92/d17d0e4a-1eb2-4aa6-8694-cecab8f3edbb/Frame_26080218.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241208%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241208T080622Z&X-Amz-Expires=3600&X-Amz-Signature=adb119b9920b918f710ac9b267c879f3cfb7a548cdc4a96af28512eae44a7e85&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "title": "Patient-Centric Administration App (Healthcare)",
+            "tags": [
+                {
+                    "id": "bb9fdf13-d59c-4573-8b48-34ddd2e93379",
+                    "name": "UI Design",
+                    "color": "orange"
+                },
+                {
+                    "id": "d4348321-7c25-4a0f-9ba8-69d2adb5fcf5",
+                    "name": "UX Design",
+                    "color": "green"
+                },
+                {
+                    "id": "95f791e9-c4fe-48a8-bcf0-986413676305",
+                    "name": "Prototyping",
+                    "color": "yellow"
+                },
+                {
+                    "id": "3e7b76c8-0686-44e3-b763-25810f6716d6",
+                    "name": "Wireframing",
+                    "color": "red"
+                }
+            ],
+            "description": "Streamlining administrative tasks for healthcare providers, including patient records, appointments, and prescriptions.",
+            "date": "2022-11-01",
+            "id": "145582a90eae809a9431ea15ef1507f0"
+        },
+        {
+            "cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/109b72ca-f851-4505-b1c9-c89d9fb02d92/a648fe40-8349-4313-a5e3-dce6bdaed4ae/Frame_79541.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241208%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241208T080622Z&X-Amz-Expires=3600&X-Amz-Signature=d0ad14dbc0d020dad162552aa898f07acb78f6836fd82b7ab0eaef274d9d1e96&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "title": "Enhancing User Engagement and Experience for Getactyv",
+            "tags": [
+                {
+                    "id": "d4348321-7c25-4a0f-9ba8-69d2adb5fcf5",
+                    "name": "UX Design",
+                    "color": "green"
+                },
+                {
+                    "id": "bb9fdf13-d59c-4573-8b48-34ddd2e93379",
+                    "name": "UI Design",
+                    "color": "orange"
+                },
+                {
+                    "id": "d33fc1fb-d1ca-44a3-8e8a-b328edcc44da",
+                    "name": "Logo Designing",
+                    "color": "pink"
+                },
+                {
+                    "id": "3e7b76c8-0686-44e3-b763-25810f6716d6",
+                    "name": "Wireframing",
+                    "color": "red"
+                },
+                {
+                    "id": "95f791e9-c4fe-48a8-bcf0-986413676305",
+                    "name": "Prototyping",
+                    "color": "yellow"
+                },
+                {
+                    "id": "b3ec3c38-ea7a-4c19-abfe-a6e11b7dd324",
+                    "name": "Ux Research",
+                    "color": "blue"
+                }
+            ],
+            "description": "Building a AI assisted personal fitness tool                                         ",
+            "date": "2022-04-01",
+            "id": "459e62542d0e4fd7905e9ffc5c718861"
+        },
+        {
+            "cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/109b72ca-f851-4505-b1c9-c89d9fb02d92/22aa5f84-f370-4bfd-a078-d6f403751471/Delivery__All_Hands__Right_hand_with_watch.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241208%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241208T080622Z&X-Amz-Expires=3600&X-Amz-Signature=80687e7f4a8f791f3ead3e3c76992c696d52d575aab01e5f67843761c4405e3a&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "title": "Online Platform for Small Bakeries",
+            "tags": [
+                {
+                    "id": "d4348321-7c25-4a0f-9ba8-69d2adb5fcf5",
+                    "name": "UX Design",
+                    "color": "green"
+                },
+                {
+                    "id": "bb9fdf13-d59c-4573-8b48-34ddd2e93379",
+                    "name": "UI Design",
+                    "color": "orange"
+                },
+                {
+                    "id": "3e7b76c8-0686-44e3-b763-25810f6716d6",
+                    "name": "Wireframing",
+                    "color": "red"
+                },
+                {
+                    "id": "95f791e9-c4fe-48a8-bcf0-986413676305",
+                    "name": "Prototyping",
+                    "color": "yellow"
+                },
+                {
+                    "id": "d33fc1fb-d1ca-44a3-8e8a-b328edcc44da",
+                    "name": "Logo Designing",
+                    "color": "pink"
+                },
+                {
+                    "id": "d31aa560-6d75-48df-b767-0b5da004cdae",
+                    "name": "Figma",
+                    "color": "default"
+                }
+            ],
+            "description": "This is a solo project for an E-coomerce mobile app of a bakery                                         ",
+            "date": "2021-12-14",
+            "id": "e372fc18b2004d838c2057f9d168af94"
+        }
+    ]
+}

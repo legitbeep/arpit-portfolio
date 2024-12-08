@@ -9,6 +9,26 @@
 "use server";
 
 import NotionService from "@/services/notion-service";
+import { promises as fs } from "fs";
+import path from "path";
+
+export async function fetchProjectsData() {
+  try {
+    // Construct the path to the projects.json file
+    const jsonDirectory = path.join(process.cwd(), "public");
+    const fileContents = await fs.readFile(
+      jsonDirectory + "/projects.json",
+      "utf8"
+    );
+
+    // Parse the JSON data
+    const projectsData = JSON.parse(fileContents);
+    return projectsData;
+  } catch (error) {
+    console.error("Error fetching projects data:", error);
+    return null;
+  }
+}
 
 let cache = {
   posts: null,

@@ -1,9 +1,9 @@
 "use client";
-import { fetchPosts } from "@/api/server";
+import { fetchProjectsData } from "@/api/server";
 import AnimatedDiv from "@/components/AnimatedDiv";
-import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
-import { Skeleton } from "@chakra-ui/react";
+import Hero from "@/components/home/hero-section";
+import Projects from "@/components/home/project-section";
+import ToolsSection from "@/components/home/tools-section";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -13,11 +13,9 @@ export default function Home() {
   const initFetch = async () => {
     try {
       setLoading(true);
-      const data = await fetchPosts();
-      setPosts(data?.posts);
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
+      const data = await fetchProjectsData();
+      setPosts(data?.projects);
+      setLoading(false);
     } catch (err) {
       console.log(err);
     }
@@ -29,21 +27,12 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-12 pt-4">
-      <video
-        class="h-full w-full object-cover fixed -z-10 left-0 top-0 "
-        autoPlay
-        muted
-        loop
-        aria-atomic="true"
-        controlsList="nodownload"
-        aria-controls="video-controls"
-      >
-        <source src="/hero-bg.webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
+    <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-12 pt-4 max-w-[1200px] mx-auto">
       <AnimatedDiv>
         <Hero />
+      </AnimatedDiv>
+      <AnimatedDiv>
+        <ToolsSection />
       </AnimatedDiv>
       <Projects posts={posts} loading={loading} />
     </main>

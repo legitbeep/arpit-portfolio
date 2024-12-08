@@ -1,20 +1,8 @@
 "use client";
-import React from "react";
-import {
-  Button,
-  ButtonGroup,
-  Card,
-  CardBody,
-  CardFooter,
-  Divider,
-  Heading,
-  Skeleton,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
-import { useRouter } from "next/navigation";
-import AnimatedDiv from "./AnimatedDiv";
+import { Skeleton } from "@chakra-ui/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import AnimatedDiv from "../AnimatedDiv";
 
 const Projects = ({ posts, loading }) => {
   const router = useRouter();
@@ -23,17 +11,16 @@ const Projects = ({ posts, loading }) => {
   };
 
   return (
-    <>
-      <h2
-        style={{
-          textAlign: "start",
-          fontSize: "2rem",
-          marginBottom: "2rem",
-          width: "100%",
-        }}
-      >
-        {"Projects --->"}
+    <div id="projects">
+      <h2 className="mt-20 w-full font-lustria text-2xl md:text-6xl leading-tight mb-6 text-center md:text-left">
+        Explore My Projects
       </h2>
+
+      <p className="font-satoshi text-gray-200 text-xs md:text-lg mt-2 mb-20 text-center mx-auto md:text-left">
+        Blend of innovative thinking and practical solutions, ensuring they are
+        both unique and effective.
+      </p>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {loading ? (
           <>
@@ -62,7 +49,7 @@ const Projects = ({ posts, loading }) => {
                     }}
                     height={800}
                     width={1200}
-                    className="dark-bg max-h-[300px] opacity-70 hover:opacity-100"
+                    className="dark-bg max-h-[300px] opacity-70 hover:opacity-100 rounded-3xl"
                   />
                 )}
                 <span className="secondary-text">
@@ -75,11 +62,16 @@ const Projects = ({ posts, loading }) => {
                     })
                   }
                 </span>
-                <h2>{post.title}</h2>
+                <h2 className="font-satoshi text-2xl text-white text-end mb-4">
+                  {post.title}
+                </h2>
                 {post.tags?.length && (
-                  <div className="flex gap-4 flex-wrap">
+                  <div className="flex gap-y-2 gap-x-1 flex-wrap justify-end">
                     {post.tags.map((tag, idx) => (
-                      <span key={idx} className="tags text-white">
+                      <span
+                        key={idx}
+                        className="font-satoshi text-sm text-gray-100 rounded-2xl border bg-gray-700 flex items-center space-x-2 p-1 px-4 max-w-max"
+                      >
                         {tag?.name}
                       </span>
                     ))}
@@ -92,7 +84,7 @@ const Projects = ({ posts, loading }) => {
           ))
         )}
       </div>
-    </>
+    </div>
   );
 };
 
