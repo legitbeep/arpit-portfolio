@@ -49,17 +49,11 @@ export const fetchPosts = async () => {
 
 export const fetchPostData = async (id) => {
   try {
-    if (!cache[id] || Date.now() - cache.timestamp[id] > 30 * 60 * 1000) {
-      const notionService = new NotionService();
-      const data = await notionService.getPostById(id);
-      cache[id] = data;
-      cache.timestamp[id] = Date.now();
-    }
-    return cache[id];
+    const notionService = new NotionService();
+    const data = await notionService.getPostById(id);
+    return data;
   } catch (error) {
     console.log({ error });
-    cache[id] = null;
-    cache.timestamp[id] = null;
     return null;
   }
 };

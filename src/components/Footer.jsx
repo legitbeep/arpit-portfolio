@@ -13,7 +13,7 @@ const SOCIAL_LINKS = [
 
 const Footer = () => {
   return (
-    <div className=" mt-12 pt-20 pb-12 mx-12 flex justify-between flex-col gap-10 md:flex-row">
+    <div className=" mt-12 pt-20 pb-24 mx-12 flex justify-between flex-col gap-10 md:flex-row">
       <h4>Copyright © {new Date().getFullYear()} Arpit Yadav</h4>
       <div className="flex gap-10 flex-col md:flex-row">
         {SOCIAL_LINKS.map((link) => (

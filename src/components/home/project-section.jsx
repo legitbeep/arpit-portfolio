@@ -1,89 +1,71 @@
 "use client";
-import { Skeleton } from "@chakra-ui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import AnimatedDiv from "../AnimatedDiv";
+import { TextAnimate } from "../ui/text-animate";
+import { BentoCard, BentoGrid } from "../ui/bento-grid";
+import { BellIcon } from "lucide-react";
 
 const Projects = ({ posts, loading }) => {
   const router = useRouter();
   const onViewProject = (id) => {
     router.push(`/project/${id}`);
   };
+  const projects = posts?.map((post, index) => ({
+    Icon: () => <></>,
+    name: post?.title,
+    description: post?.description,
+    href: `/project/${post?.id}`,
+    cta: "Know more",
+    className:
+      index % 3 ? "col-span-3 lg:col-span-2" : "col-span-3 lg:col-span-1",
+    background: post?.cover?.includes(".mp4") ? (
+      <div className="relative max-h-[100px] md:max-h-[250px]">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover pointer-events-none opacity-40"
+          src={post?.cover}
+        >
+          <source src={post?.cover} type="video/mp4" />
+        </video>
+      </div>
+    ) : (
+      <Image
+        src={post?.cover}
+        alt={post?.title}
+        layout="fill"
+        objectFit="cover"
+        className="rounded-lg filter opacity-15"
+      />
+    ),
+  }));
+  console.log({ projects });
 
   return (
     <div id="projects">
-      <h2 className="mt-20 w-full font-lustria text-2xl md:text-6xl leading-tight mb-6 text-center md:text-left">
+      <TextAnimate
+        segmentClassName={
+          "font-lustria text-2xl md:text-6xl leading-tight text-white"
+        }
+        className="mt-20 w-full mb-6 text-center md:text-center"
+      >
         Explore My Projects
-      </h2>
+      </TextAnimate>
 
-      <p className="font-satoshi text-gray-200 text-xs md:text-lg mt-2 mb-20 text-center mx-auto md:text-left">
+      <p className="font-satoshi text-gray-200 text-xs md:text-lg mt-2 mb-20 text-center mx-auto md:text-center md:max-w-[500px]">
         Blend of innovative thinking and practical solutions, ensuring they are
         both unique and effective.
       </p>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <BentoGrid>
         {loading ? (
-          <>
-            {[1, 2, 3, 4].map((_, i) => (
-              <Skeleton key={i} height="200px" width="200px" />
-            ))}
-          </>
+          <>Loading...</>
         ) : (
-          posts?.map((post, idx) => (
-            <AnimatedDiv key={idx}>
-              <div
-                className="project-details w-full cursor-pointer flex flex-col items-end"
-                role="button"
-                onClick={() => onViewProject(post.id)}
-              >
-                {post.cover && (
-                  <Image
-                    src={post.cover}
-                    alt="cover-img"
-                    style={{
-                      width: "100%",
-                      objectFit: "contain",
-                      marginBottom: "1rem",
-                      aspectRatio: "1/1",
-                      objectFit: "cover",
-                    }}
-                    height={800}
-                    width={1200}
-                    className="dark-bg max-h-[300px] opacity-70 hover:opacity-100 rounded-3xl"
-                  />
-                )}
-                <span className="secondary-text">
-                  {
-                    // format date from yyyy-mm-dd to dd mmm yy format
-                    new Date(post?.date).toLocaleDateString("en-US", {
-                      day: "numeric",
-                      month: "short",
-                      year: "2-digit",
-                    })
-                  }
-                </span>
-                <h2 className="font-satoshi text-2xl text-white text-end mb-4">
-                  {post.title}
-                </h2>
-                {post.tags?.length && (
-                  <div className="flex gap-y-2 gap-x-1 flex-wrap justify-end">
-                    {post.tags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="font-satoshi text-sm text-gray-100 rounded-2xl border bg-gray-700 flex items-center space-x-2 p-1 px-4 max-w-max"
-                      >
-                        {tag?.name}
-                      </span>
-                    ))}
-                  </div>
-                )}
-                {/* <span>{post.description}</span> */}
-                {/* <p>View</p> */}
-              </div>
-            </AnimatedDiv>
-          ))
+          projects?.map((project, idx) => <BentoCard key={idx} {...project} />)
         )}
-      </div>
+      </BentoGrid>
     </div>
   );
 };

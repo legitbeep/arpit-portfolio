@@ -1,9 +1,10 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ChakraWrapper from "@/components/ChakraProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { DockDemo, LinksDock } from "@/components/links-dock";
+import Particles from "@/components/ui/particles";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
-          <ChakraWrapper>{children}</ChakraWrapper>
+          {children}
+          {/* <LinksDock /> */}
           <Footer />
         </ThemeProvider>
       </body>

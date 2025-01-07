@@ -11,7 +11,7 @@ import AnimatedColors from "./AnimatedColors";
 
 const menuItems = [
   { name: "Home", href: "/#" },
-  // { name: "About", href: "/about" },
+  { name: "About", href: "/#aboutme" },
   { name: "Projects", href: "/#projects" },
 ];
 
